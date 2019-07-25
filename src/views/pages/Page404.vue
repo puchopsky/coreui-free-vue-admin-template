@@ -14,7 +14,8 @@
                 <i class="fa fa-search"></i>
               </b-input-group-text>
             </b-input-group-prepend>
-            <input id="prependedInput" class="form-control" size="16" type="text" placeholder="What are you looking for?">
+            <input class="form-control" id="prependedInput" placeholder="What are you looking for?" size="16"
+                   type="text">
             <b-input-group-append>
               <b-button variant="info">Search</b-button>
             </b-input-group-append>
@@ -26,7 +27,7 @@
 </template>
 
 <script>
-export default {
-  name: 'Page404'
-}
+  export default {
+    name: 'Page404'
+  };
 </script>

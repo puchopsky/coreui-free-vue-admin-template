@@ -2,14 +2,15 @@
   <div class="wrapper">
     <div class="animated fadeIn">
       <b-row>
-        <b-col cols="12" >
+        <b-col cols="12">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i><strong> Bootstrap button group</strong>
               <div class="card-header-actions">
-                <a href="https://bootstrap-vue.js.org/docs/components/button-group" class="card-header-action" rel="noreferrer noopener" target="_blank">
+                <a class="card-header-action" href="https://bootstrap-vue.js.org/docs/components/button-group"
+                   rel="noreferrer noopener" target="_blank">
                   <small class="text-muted">docs</small>
                 </a>
               </div>
@@ -36,8 +37,8 @@
         </b-col>
         <b-col cols="12">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i><strong> Button group </strong>sizing
             </div>
@@ -64,8 +65,8 @@
         </b-col>
         <b-col cols="12">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i><strong> Button group </strong>dropdown support
             </div>
@@ -92,8 +93,8 @@
         </b-col>
         <b-col cols="12">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i><strong> Button group </strong>vertical variation
             </div>
@@ -108,18 +109,19 @@
         </b-col>
         <b-col cols="12">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i> <strong>Button toolbar</strong> <small>with button groups</small>
               <div class="card-header-actions">
-                <a href="https://bootstrap-vue.js.org/docs/components/button-toolbar" class="card-header-action" rel="noreferrer noopener" target="_blank">
+                <a class="card-header-action" href="https://bootstrap-vue.js.org/docs/components/button-toolbar"
+                   rel="noreferrer noopener" target="_blank">
                   <small class="text-muted">docs</small>
                 </a>
               </div>
             </div>
             <div>
-              <b-button-toolbar key-nav aria-label="Toolbar with button groups">
+              <b-button-toolbar aria-label="Toolbar with button groups" key-nav>
                 <b-button-group class="mx-1">
                   <b-btn class="d-sm-down-none">&laquo;</b-btn>
                   <b-btn>&lsaquo;</b-btn>
@@ -138,26 +140,26 @@
             <hr class="d-sm-down-none"/>
             <div>
               <b-button-toolbar aria-label="Toolbar with button groups and input groups" class="d-sm-down-none">
-                <b-button-group size="sm" class="mx-1">
+                <b-button-group class="mx-1" size="sm">
                   <b-btn>New</b-btn>
                   <b-btn>Edit</b-btn>
                 </b-button-group>
-                <b-input-group size="sm" class="w-25 mx-1">
+                <b-input-group class="w-25 mx-1" size="sm">
                   <b-input-group-prepend>
                     <b-input-group-text>$</b-input-group-text>
                   </b-input-group-prepend>
-                  <b-form-input value="100" class="text-right"></b-form-input>
+                  <b-form-input class="text-right" value="100"></b-form-input>
                   <b-input-group-append>
                     <b-input-group-text>.00</b-input-group-text>
                   </b-input-group-append>
                 </b-input-group>
-                <b-input-group  size="sm" class="w-25 mx-1">
+                <b-input-group class="w-25 mx-1" size="sm">
                   <b-input-group-prepend>
                     <b-input-group-text>Size</b-input-group-text>
                   </b-input-group-prepend>
-                  <b-form-select value="Medium" :options="['Large','Medium','Small']"></b-form-select>
+                  <b-form-select :options="['Large','Medium','Small']" value="Medium"></b-form-select>
                 </b-input-group>
-                <b-button-group  size="sm" class="mx-1">
+                <b-button-group class="mx-1" size="sm">
                   <b-btn>Save</b-btn>
                   <b-btn>Cancel</b-btn>
                 </b-button-group>
@@ -190,7 +192,7 @@
 </template>
 
 <script>
-export default {
-  name: 'button-groups'
-}
+  export default {
+    name: 'button-groups'
+  };
 </script>

@@ -14,29 +14,30 @@
 </template>
 
 <script>
-import { rgbToHex } from '@coreui/coreui/dist/js/coreui-utilities'
-export default {
-  name: 'ColorView',
-  data: function () {
-    return {
-      bgColor: 'rgb(255, 255, 255)'
+  import { rgbToHex } from '@coreui/coreui/dist/js/coreui-utilities';
+
+  export default {
+    name: 'ColorView',
+    data: function () {
+      return {
+        bgColor: 'rgb(255, 255, 255)'
+      };
+    },
+    computed: {
+      hexColor () {
+        return rgbToHex(this.bgColor);
+      }
+    },
+    methods: {
+      setColor () {
+        const elem = this.$parent.$el.children[0];
+        const color = window.getComputedStyle(elem).getPropertyValue('background-color');
+        this.bgColor = color || this.bgColor;
+      }
+    },
+    mounted () {
+      this.setColor();
     }
-  },
-  computed: {
-    hexColor () {
-      return rgbToHex(this.bgColor)
-    }
-  },
-  methods: {
-    setColor () {
-      const elem = this.$parent.$el.children[0]
-      const color = window.getComputedStyle(elem).getPropertyValue('background-color')
-      this.bgColor = color || this.bgColor
-    }
-  },
-  mounted () {
-    this.setColor()
-  }
-}
+  };
 </script>
 

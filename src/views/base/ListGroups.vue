@@ -4,12 +4,13 @@
       <b-row>
         <b-col md="6">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i><strong> Bootstrap list group </strong>
               <div class="card-header-actions">
-                <a href="https://bootstrap-vue.js.org/docs/components/list-group" class="card-header-action" rel="noreferrer noopener" target="_blank">
+                <a class="card-header-action" href="https://bootstrap-vue.js.org/docs/components/list-group"
+                   rel="noreferrer noopener" target="_blank">
                   <small class="text-muted">docs</small>
                 </a>
               </div>
@@ -25,8 +26,8 @@
         </b-col>
         <b-col md="6">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i><strong> List group </strong><small>active items</small>
             </div>
@@ -43,8 +44,8 @@
       <b-row>
         <b-col md="6">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i><strong> List group </strong><small>disabled items</small>
             </div>
@@ -59,16 +60,16 @@
         </b-col>
         <b-col md="6">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i><strong> List group </strong><small>actionable items</small>
             </div>
             <b-list-group>
               <b-list-group-item href="#some-link">Awesome link</b-list-group-item>
-              <b-list-group-item href="#" active>Link with active state</b-list-group-item>
+              <b-list-group-item active href="#">Link with active state</b-list-group-item>
               <b-list-group-item href="#">Action links are easy</b-list-group-item>
-              <b-list-group-item href="#foobar" disabled>Disabled link</b-list-group-item>
+              <b-list-group-item disabled href="#foobar">Disabled link</b-list-group-item>
             </b-list-group>
           </b-card>
         </b-col>
@@ -76,8 +77,8 @@
       <b-row>
         <b-col md="6">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i><strong> List group </strong><small>buttons</small>
             </div>
@@ -91,23 +92,23 @@
         </b-col>
         <b-col md="6">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i><strong> List group </strong><small>with badges</small>
             </div>
             <b-list-group>
               <b-list-group-item class="d-flex justify-content-between align-items-center">
                 Cras justo odio
-                <b-badge variant="primary" pill>14</b-badge>
+                <b-badge pill variant="primary">14</b-badge>
               </b-list-group-item>
               <b-list-group-item class="d-flex justify-content-between align-items-center">
                 Dapibus ac facilisis in
-                <b-badge variant="primary" pill>2</b-badge>
+                <b-badge pill variant="primary">2</b-badge>
               </b-list-group-item>
               <b-list-group-item class="d-flex justify-content-between align-items-center">
                 Morbi leo risus
-                <b-badge variant="primary" pill>1</b-badge>
+                <b-badge pill variant="primary">1</b-badge>
               </b-list-group-item>
             </b-list-group>
           </b-card>
@@ -116,8 +117,8 @@
       <b-row>
         <b-col md="6">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i><strong> List group </strong><small>variants</small>
             </div>
@@ -136,8 +137,8 @@
         </b-col>
         <b-col md="6">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i><strong> List group </strong><small>variants active</small>
             </div>
@@ -158,8 +159,8 @@
       <b-row>
         <b-col cols="12">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i><strong> List group </strong><small>inside cards</small>
             </div>
@@ -199,13 +200,13 @@
       <b-row>
         <b-col md="6">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i><strong> List group </strong><small>custom content</small>
             </div>
             <b-list-group>
-              <b-list-group-item href="#" active class="flex-column align-items-start">
+              <b-list-group-item active class="flex-column align-items-start" href="#">
                 <div class="d-flex w-100 justify-content-between">
                   <h5 class="mb-1">List group item heading</h5>
                   <small>3 days ago</small>
@@ -216,7 +217,7 @@
                 </p>
                 <small>Donec id elit non mi porta.</small>
               </b-list-group-item>
-              <b-list-group-item href="#" class="flex-column align-items-start">
+              <b-list-group-item class="flex-column align-items-start" href="#">
                 <div class="d-flex w-100 justify-content-between">
                   <h5 class="mb-1">List group item heading</h5>
                   <small class="text-muted">3 days ago</small>
@@ -227,7 +228,7 @@
                 </p>
                 <small class="text-muted">Donec id elit non mi porta.</small>
               </b-list-group-item>
-              <b-list-group-item href="#" disabled class="flex-column align-items-start">
+              <b-list-group-item class="flex-column align-items-start" disabled href="#">
                 <div class="d-flex w-100 justify-content-between">
                   <h5 class="mb-1">Disabled List group item</h5>
                   <small class="text-muted">3 days ago</small>
@@ -247,8 +248,8 @@
 </template>
 
 <script>
-export default {
-  name: 'list-groups'
-}
+  export default {
+    name: 'list-groups'
+  };
 </script>
 

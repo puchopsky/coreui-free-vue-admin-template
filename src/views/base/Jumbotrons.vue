@@ -4,12 +4,13 @@
       <b-row>
         <b-col>
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i> <strong> Bootstrap Jumbotron </strong>
               <div class="card-header-actions">
-                <a href="https://bootstrap-vue.js.org/docs/components/jumbotron" class="card-header-action" rel="noreferrer noopener" target="_blank">
+                <a class="card-header-action" href="https://bootstrap-vue.js.org/docs/components/jumbotron"
+                   rel="noreferrer noopener" target="_blank">
                   <small class="text-muted">docs</small>
                 </a>
               </div>
@@ -17,15 +18,15 @@
             <div>
               <b-jumbotron header="Bootstrap 4" lead="Bootstrap 4 Components for Vue.js 2">
                 <p>For more information visit website</p>
-                <b-btn variant="primary" href="#">More Info</b-btn>
+                <b-btn href="#" variant="primary">More Info</b-btn>
               </b-jumbotron>
             </div>
           </b-card>
         </b-col>
         <b-col>
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i> <strong> Jumbotron </strong>
               <small>with slots</small>
@@ -44,8 +45,8 @@
                   It uses utility classes for typography and spacing to space content
                   out within the larger container.
                 </p>
-                <b-btn variant="primary" href="#">Do Something</b-btn>
-                <b-btn variant="success" href="#">Do Something Else</b-btn>
+                <b-btn href="#" variant="primary">Do Something</b-btn>
+                <b-btn href="#" variant="success">Do Something Else</b-btn>
               </b-jumbotron>
             </div>
           </b-card>
@@ -54,14 +55,14 @@
       <b-row>
         <b-col>
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i> <strong> Jumbotron </strong>
               <small>variants</small>
             </div>
             <div>
-              <b-jumbotron bg-variant="info" text-variant="white" border-variant="dark">
+              <b-jumbotron bg-variant="info" border-variant="dark" text-variant="white">
                 <template slot="header">
                   Bootstrap 4
                 </template>
@@ -84,8 +85,8 @@
 </template>
 
 <script>
-export default {
-  name: 'jumbotrons'
-}
+  export default {
+    name: 'jumbotrons'
+  };
 </script>
 

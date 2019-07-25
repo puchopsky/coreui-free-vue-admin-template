@@ -3,9 +3,9 @@
     <b-col cols="12" lg="6">
       <b-card no-header>
         <template slot="header">
-          User id:  {{ $route.params.id }}
+          User id: {{ $route.params.id }}
         </template>
-        <b-table striped small fixed responsive="sm" :items="items($route.params.id)" :fields="fields">
+        <b-table :fields="fields" :items="items($route.params.id)" fixed responsive="sm" small striped>
           <template slot="value" slot-scope="data">
             <strong>{{data.item.value}}</strong>
           </template>
@@ -19,33 +19,34 @@
 </template>
 
 <script>
-import usersData from './UsersData'
-export default {
-  name: 'User',
-  props: {
-    caption: {
-      type: String,
-      default: 'User id'
-    },
-  },
-  data: () => {
-    return {
-      items: (id) => {
-        const user = usersData.find( user => user.id.toString() === id)
-        const userDetails = user ? Object.entries(user) : [['id', 'Not found']]
-        return userDetails.map(([key, value]) => {return {key: key, value: value}})
+  import usersData from './UsersData';
+
+  export default {
+    name: 'User',
+    props: {
+      caption: {
+        type: String,
+        default: 'User id'
       },
-      fields: [
-        {key: 'key'},
-        {key: 'value'},
-      ],
+    },
+    data: () => {
+      return {
+        items: (id) => {
+          const user = usersData.find(user => user.id.toString() === id);
+          const userDetails = user ? Object.entries(user) : [['id', 'Not found']];
+          return userDetails.map(([key, value]) => {return { key: key, value: value };});
+        },
+        fields: [
+          { key: 'key' },
+          { key: 'value' },
+        ],
+      };
+    },
+    methods: {
+      goBack () {
+        this.$router.go(-1);
+        // this.$router.replace({path: '/users'})
+      }
     }
-  },
-  methods: {
-    goBack() {
-      this.$router.go(-1)
-      // this.$router.replace({path: '/users'})
-    }
-  }
-}
+  };
 </script>

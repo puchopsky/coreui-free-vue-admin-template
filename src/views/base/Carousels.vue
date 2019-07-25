@@ -2,36 +2,37 @@
   <div class="wrapper">
     <div class="animated fadeIn">
       <b-row>
-        <b-col md="12" lg="9" >
+        <b-col lg="9" md="12">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i><strong> Bootstrap Carousel</strong>
               <div class="card-header-actions">
-                <a href="https://bootstrap-vue.js.org/docs/components/carousel" class="card-header-action" rel="noreferrer noopener" target="_blank">
+                <a class="card-header-action" href="https://bootstrap-vue.js.org/docs/components/carousel"
+                   rel="noreferrer noopener" target="_blank">
                   <small class="text-muted">docs</small>
                 </a>
               </div>
             </div>
             <div>
-              <b-carousel id="carousel1"
-                          style="text-shadow: 1px 1px 2px #333;"
-                          controls
-                          indicators
-                          background="#ababab"
-                          :interval="4000"
-                          img-width="1024"
-                          img-height="480"
-                          v-model="slide"
-                          @sliding-start="onSlideStart"
+              <b-carousel :interval="4000"
                           @sliding-end="onSlideEnd"
+                          @sliding-start="onSlideStart"
+                          background="#ababab"
+                          controls
+                          id="carousel1"
+                          img-height="480"
+                          img-width="1024"
+                          indicators
+                          style="text-shadow: 1px 1px 2px #333;"
+                          v-model="slide"
               >
 
                 <!-- Text slides with image -->
                 <b-carousel-slide caption="First slide"
-                                  text="Nulla vitae elit libero, a pharetra augue mollis interdum."
                                   img-src="https://lorempixel.com/1024/480/technics/2/"
+                                  text="Nulla vitae elit libero, a pharetra augue mollis interdum."
                 ></b-carousel-slide>
 
                 <!-- Slides with custom text -->
@@ -46,12 +47,12 @@
                 <!-- Slides with img slot -->
                 <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
                 <b-carousel-slide>
-                  <img slot="img" class="d-block img-fluid w-100" width="1024" height="480"
-                       src="https://lorempixel.com/1024/480/technics/5/" alt="image slot">
+                  <img alt="image slot" class="d-block img-fluid w-100" height="480" slot="img"
+                       src="https://lorempixel.com/1024/480/technics/5/" width="1024">
                 </b-carousel-slide>
 
                 <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-                <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
+                <b-carousel-slide caption="Blank Image" img-alt="Blank image" img-blank>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                     eros felis, tincidunt a tincidunt eget, convallis vel est. Ut pellentesque
@@ -75,23 +76,23 @@
 </template>
 
 <script>
-export default {
-  name: 'carousels',
-  data () {
-    return {
-      slide: 0,
-      sliding: null
-    }
-  },
-  methods: {
-    onSlideStart (slide) {
-      console.log('onSlideStart', slide)
-      this.sliding = true
+  export default {
+    name: 'carousels',
+    data () {
+      return {
+        slide: 0,
+        sliding: null
+      };
     },
-    onSlideEnd (slide) {
-      console.log('onSlideEnd', slide)
-      this.sliding = false
+    methods: {
+      onSlideStart (slide) {
+        console.log('onSlideStart', slide);
+        this.sliding = true;
+      },
+      onSlideEnd (slide) {
+        console.log('onSlideEnd', slide);
+        this.sliding = false;
+      }
     }
-  }
-}
+  };
 </script>

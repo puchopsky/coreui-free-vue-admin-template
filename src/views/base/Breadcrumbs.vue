@@ -4,12 +4,13 @@
       <b-row>
         <b-col cols="12">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i><strong> Bootstrap Breadcrumb</strong>
               <div class="card-header-actions">
-                <a href="https://bootstrap-vue.js.org/docs/components/breadcrumb" class="card-header-action" rel="noreferrer noopener" target="_blank">
+                <a class="card-header-action" href="https://bootstrap-vue.js.org/docs/components/breadcrumb"
+                   rel="noreferrer noopener" target="_blank">
                   <small class="text-muted">docs</small>
                 </a>
               </div>
@@ -23,21 +24,21 @@
 </template>
 
 <script>
-export default {
-  name: 'breadcrumbs',
-  data () {
-    return {
-      items: [{
-        text: 'Admin',
-        href: '#'
-      }, {
-        text: 'Manage',
-        href: '#'
-      }, {
-        text: 'Library',
-        active: true
-      }]
+  export default {
+    name: 'breadcrumbs',
+    data () {
+      return {
+        items: [{
+          text: 'Admin',
+          href: '#'
+        }, {
+          text: 'Manage',
+          href: '#'
+        }, {
+          text: 'Library',
+          active: true
+        }]
+      };
     }
-  }
-}
+  };
 </script>

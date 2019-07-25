@@ -2,12 +2,14 @@
   <div class="wrapper">
     <div class="animated fadeIn">
       <b-card
-        header-tag="header"
-        footer-tag="footer">
+        footer-tag="footer"
+        header-tag="header">
         <div slot="header">
-          <i class="fa fa-align-justify"></i><strong> Bootstrap Tooltips </strong><small><code>v-b-tooltip</code> directive</small>
+          <i class="fa fa-align-justify"></i><strong> Bootstrap Tooltips </strong><small><code>v-b-tooltip</code>
+          directive</small>
           <div class="card-header-actions">
-            <a href="https://bootstrap-vue.js.org/docs/components/tooltip" class="card-header-action" rel="noreferrer noopener" target="_blank">
+            <a class="card-header-action" href="https://bootstrap-vue.js.org/docs/components/tooltip"
+               rel="noreferrer noopener" target="_blank">
               <small class="text-muted">docs</small>
             </a>
           </div>
@@ -15,7 +17,7 @@
         <b-row>
           <b-col cols="6">
             <div class="text-center my-3">
-              <b-btn v-b-tooltip.hover title="I am a tooltip!">Hover Me</b-btn>
+              <b-btn title="I am a tooltip!" v-b-tooltip.hover>Hover Me</b-btn>
             </div>
           </b-col>
           <b-col cols="6">
@@ -29,16 +31,16 @@
         </b-row>
       </b-card>
       <b-card
-        header-tag="header"
-        footer-tag="footer">
+        footer-tag="footer"
+        header-tag="header">
         <div slot="header">
           <i class="fa fa-align-justify"></i><strong> Tooltips </strong><small><code>b-tooltip</code> component</small>
         </div>
         <b-row>
-          <b-col md="6" class="py-4 text-center">
+          <b-col class="py-4 text-center" md="6">
             <b-btn id="exButton1" variant="outline-success">Live chat</b-btn>
           </b-col>
-          <b-col md="6" class="py-4 text-center">
+          <b-col class="py-4 text-center" md="6">
             <b-btn id="exButton2" variant="outline-success">Html chat</b-btn>
           </b-col>
         </b-row>
@@ -47,13 +49,13 @@
         <b-tooltip target="exButton1" title="Online!"></b-tooltip>
 
         <!-- HTML title specified via default slot -->
-        <b-tooltip target="exButton2" placement="bottom">
+        <b-tooltip placement="bottom" target="exButton2">
           Hello <strong>World!</strong>
         </b-tooltip>
       </b-card>
       <b-card
-        header-tag="header"
-        footer-tag="footer">
+        footer-tag="footer"
+        header-tag="header">
         <div slot="header">
           <i class="fa fa-align-justify"></i><strong> Tooltips </strong><small><code>show</code> prop</small>
         </div>
@@ -62,14 +64,14 @@
           <br><br>
           <b-btn @click="show = !show">Toggle Tooltip</b-btn>
 
-          <b-tooltip :show.sync="show" target="tooltipButton-1" placement="top">
+          <b-tooltip :show.sync="show" placement="top" target="tooltipButton-1">
             Hello <strong>World!</strong>
           </b-tooltip>
         </div>
       </b-card>
       <b-card
-        header-tag="header"
-        footer-tag="footer">
+        footer-tag="footer"
+        header-tag="header">
         <div slot="header">
           <i class="fa fa-align-justify"></i><strong> Tooltips </strong><small><code>open close</code> events</small>
         </div>
@@ -78,8 +80,8 @@
             <b-btn id="tooltipButton-showEvent" variant="primary">I have a tooltip</b-btn>
           </div>
           <div class="p-2">
-            <b-btn class="px-1 mr-1" @click="onOpen">Open</b-btn>
-            <b-btn class="px-1" @click="onClose">Close</b-btn>
+            <b-btn @click="onOpen" class="px-1 mr-1">Open</b-btn>
+            <b-btn @click="onClose" class="px-1">Close</b-btn>
           </div>
 
           <b-tooltip ref="tooltip" target="tooltipButton-showEvent">
@@ -88,10 +90,11 @@
         </div>
       </b-card>
       <b-card
-        header-tag="header"
-        footer-tag="footer">
+        footer-tag="footer"
+        header-tag="header">
         <div slot="header">
-          <i class="fa fa-align-justify"></i><strong> Tooltips </strong><small><code>enable disable</code> events</small>
+          <i class="fa fa-align-justify"></i><strong> Tooltips </strong><small><code>enable disable</code>
+          events</small>
         </div>
         <div class="d-flex flex-column text-md-center">
           <div class="p-2">
@@ -117,29 +120,29 @@
 </template>
 
 <script>
-export default {
-  name: 'tooltips',
-  data () {
-    return {
-      show: true,
-      disabled: false
-    }
-  },
-  methods: {
-    onOpen () {
-      this.$refs.tooltip.$emit('open')
+  export default {
+    name: 'tooltips',
+    data () {
+      return {
+        show: true,
+        disabled: false
+      };
     },
-    onClose () {
-      this.$refs.tooltip.$emit('close')
-    },
-    disableByRef () {
-      if (this.disabled) {
-        this.$refs.tooltip2.$emit('enable')
-      } else {
-        this.$refs.tooltip2.$emit('disable')
+    methods: {
+      onOpen () {
+        this.$refs.tooltip.$emit('open');
+      },
+      onClose () {
+        this.$refs.tooltip.$emit('close');
+      },
+      disableByRef () {
+        if (this.disabled) {
+          this.$refs.tooltip2.$emit('enable');
+        } else {
+          this.$refs.tooltip2.$emit('disable');
+        }
       }
     }
-  }
-}
+  };
 </script>
 

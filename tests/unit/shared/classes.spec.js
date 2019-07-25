@@ -1,4 +1,4 @@
-import {sidebarCssClasses, asideMenuCssClasses, validBreakpoints, checkBreakpoint} from '@/shared/classes'
+import { asideMenuCssClasses, checkBreakpoint, sidebarCssClasses, validBreakpoints } from '@/shared/classes';
 
 test('sidebarCssClasses', () => {
   expect(sidebarCssClasses.constructor === Array).toBe(true);

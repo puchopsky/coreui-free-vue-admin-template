@@ -4,12 +4,13 @@
       <b-row>
         <b-col cols="12" md="6">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i><strong> Bootstrap Alert</strong>
               <div class="card-header-actions">
-                <a href="https://bootstrap-vue.js.org/docs/components/alert" class="card-header-action" rel="noreferrer noopener" target="_blank">
+                <a class="card-header-action" href="https://bootstrap-vue.js.org/docs/components/alert"
+                   rel="noreferrer noopener" target="_blank">
                   <small class="text-muted">docs</small>
                 </a>
               </div>
@@ -28,37 +29,37 @@
         </b-col>
         <b-col cols="12" md="6">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i> Alert
               <small> use <code>.alert-link</code> to provide links</small>
             </div>
             <div>
               <b-alert show variant="primary">
-                Primary Alert with <a href="#" class="alert-link">an example link</a>.
+                Primary Alert with <a class="alert-link" href="#">an example link</a>.
               </b-alert>
               <b-alert show variant="secondary">
-                Secondary Alert with <a href="#" class="alert-link">an example link</a>.
+                Secondary Alert with <a class="alert-link" href="#">an example link</a>.
               </b-alert>
               <b-alert show variant="success">
-                Success Alert with <a href="#" class="alert-link">an example link</a>.
+                Success Alert with <a class="alert-link" href="#">an example link</a>.
               </b-alert>
               <b-alert show variant="danger">
-                Danger Alert with <a href="#" class="alert-link">an example link</a>.
+                Danger Alert with <a class="alert-link" href="#">an example link</a>.
               </b-alert>
               <b-alert show variant="warning">
-                Warning Alert with <a href="#" class="alert-link">an example link</a>.
+                Warning Alert with <a class="alert-link" href="#">an example link</a>.
               </b-alert>
               <b-alert show variant="info">
-                Info Alert with <a href="#" class="alert-link">an example link</a>.
+                Info Alert with <a class="alert-link" href="#">an example link</a>.
               </b-alert>
               <b-alert show variant="light">
-                Light Alert with <a href="#" class="alert-link">an example link</a>.
+                Light Alert with <a class="alert-link" href="#">an example link</a>.
               </b-alert>
               <b-alert show variant="dark">
                 Dark Alert with
-                <b-link href="#" class="alert-link">an example link</b-link>
+                <b-link class="alert-link" href="#">an example link</b-link>
                 .
               </b-alert>
             </div>
@@ -66,8 +67,8 @@
         </b-col>
         <b-col cols="12" md="6">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i> Alerts <small>with additional content</small>
             </div>
@@ -87,53 +88,53 @@
         </b-col>
         <b-col cols="12" md="6">
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i> Alerts <small>dismissible</small>
             </div>
             <div>
-              <b-alert show dismissible>
+              <b-alert dismissible show>
                 Dismissible Alert!
               </b-alert>
-            <b-alert variant="danger"
-                     dismissible
-                     :show="showDismissibleAlert"
-                     @dismissed="showDismissibleAlert=false">
-              Dismissible Alert!
-            </b-alert>
-            <b-btn @click="showDismissibleAlert=true" variant="info" class="m-1">
-              Show dismissible alert ({{showDismissibleAlert?'visible':'hidden'}})
-            </b-btn>
+              <b-alert :show="showDismissibleAlert"
+                       @dismissed="showDismissibleAlert=false"
+                       dismissible
+                       variant="danger">
+                Dismissible Alert!
+              </b-alert>
+              <b-btn @click="showDismissibleAlert=true" class="m-1" variant="info">
+                Show dismissible alert ({{showDismissibleAlert?'visible':'hidden'}})
+              </b-btn>
             </div>
           </b-card>
           <b-card
-            header-tag="header"
-            footer-tag="footer">
+            footer-tag="footer"
+            header-tag="header">
             <div slot="header">
               <i class="fa fa-align-justify"></i> Alerts <small>auto dismissible</small>
             </div>
             <div>
               <b-alert :show="dismissCountDown"
-                       dismissible
-                       variant="warning"
+                       @dismiss-count-down="countDownChanged"
                        @dismissed="dismissCountdown=0"
-                       @dismiss-count-down="countDownChanged">
+                       dismissible
+                       variant="warning">
                 Alert will dismiss after <strong>{{dismissCountDown}}</strong> seconds...
               </b-alert>
               <b-alert :show="dismissCountDown"
-                       dismissible
-                       variant="info"
+                       @dismiss-count-down="countDownChanged"
                        @dismissed="dismissCountdown=0"
-                       @dismiss-count-down="countDownChanged">
+                       dismissible
+                       variant="info">
                 Alert will dismiss after {{dismissCountDown}} seconds...
-                <b-progress variant="info"
-                            :max="dismissSecs"
+                <b-progress :max="dismissSecs"
                             :value="dismissCountDown"
-                            height="4px">
+                            height="4px"
+                            variant="info">
                 </b-progress>
               </b-alert>
-              <b-btn @click="showAlert" variant="info" class="m-1">
+              <b-btn @click="showAlert" class="m-1" variant="info">
                 Show alert with timer
               </b-btn>
             </div>
@@ -145,22 +146,22 @@
 </template>
 
 <script>
-export default {
-  name: 'alerts',
-  data () {
-    return {
-      dismissSecs: 10,
-      dismissCountDown: 0,
-      showDismissibleAlert: false
-    }
-  },
-  methods: {
-    countDownChanged (dismissCountDown) {
-      this.dismissCountDown = dismissCountDown
+  export default {
+    name: 'alerts',
+    data () {
+      return {
+        dismissSecs: 10,
+        dismissCountDown: 0,
+        showDismissibleAlert: false
+      };
     },
-    showAlert () {
-      this.dismissCountDown = this.dismissSecs
+    methods: {
+      countDownChanged (dismissCountDown) {
+        this.dismissCountDown = dismissCountDown;
+      },
+      showAlert () {
+        this.dismissCountDown = this.dismissSecs;
+      }
     }
-  }
-}
+  };
 </script>

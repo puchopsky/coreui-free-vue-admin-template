@@ -18,14 +18,14 @@
 </template>
 
 <script>
-export default {
-  name: 'Widget03',
-  props: {
-    value: {
-      type: Boolean,
-      default: true
+  export default {
+    name: 'Widget03',
+    props: {
+      value: {
+        type: Boolean,
+        default: true
+      }
     }
-  }
-}
+  };
 </script>
 

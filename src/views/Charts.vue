@@ -1,6 +1,6 @@
 <template>
   <div class="animated fadeIn">
-    <b-card-group columns class="card-columns">
+    <b-card-group class="card-columns" columns>
       <b-card header="Line Chart">
         <div class="chart-wrapper">
           <line-example chartId="chart-line-01"/>
@@ -35,22 +35,22 @@
   </div>
 </template>
 <script>
-import BarExample from './charts/BarExample'
-import LineExample from './charts/LineExample'
-import DoughnutExample from './charts/DoughnutExample'
-import RadarExample from './charts/RadarExample'
-import PieExample from './charts/PieExample'
-import PolarAreaExample from './charts/PolarAreaExample'
+  import BarExample from './charts/BarExample';
+  import LineExample from './charts/LineExample';
+  import DoughnutExample from './charts/DoughnutExample';
+  import RadarExample from './charts/RadarExample';
+  import PieExample from './charts/PieExample';
+  import PolarAreaExample from './charts/PolarAreaExample';
 
-export default {
-  name: 'charts',
-  components: {
-    BarExample,
-    LineExample,
-    DoughnutExample,
-    RadarExample,
-    PieExample,
-    PolarAreaExample
-  }
-}
+  export default {
+    name: 'charts',
+    components: {
+      BarExample,
+      LineExample,
+      DoughnutExample,
+      RadarExample,
+      PieExample,
+      PolarAreaExample
+    }
+  };
 </script>

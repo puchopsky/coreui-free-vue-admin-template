@@ -2,12 +2,13 @@
   <div class="wrapper">
     <div class="animated fadeIn">
       <b-card
-        header-tag="header"
-        footer-tag="footer">
+        footer-tag="footer"
+        header-tag="header">
         <div slot="header">
           <i class="fa fa-align-justify"></i><strong> Bootstrap Navs</strong>
           <div class="card-header-actions">
-            <a href="https://bootstrap-vue.js.org/docs/components/nav" class="card-header-action" rel="noreferrer noopener" target="_blank">
+            <a class="card-header-action" href="https://bootstrap-vue.js.org/docs/components/nav"
+               rel="noreferrer noopener" target="_blank">
               <small class="text-muted">docs</small>
             </a>
           </div>
@@ -22,8 +23,8 @@
         </div>
       </b-card>
       <b-card
-        header-tag="header"
-        footer-tag="footer">
+        footer-tag="footer"
+        header-tag="header">
         <div slot="header">
           <i class="fa fa-align-justify"></i><strong> Bootstrap Navs </strong><small>tab style</small>
         </div>
@@ -37,8 +38,8 @@
         </div>
       </b-card>
       <b-card
-        header-tag="header"
-        footer-tag="footer">
+        footer-tag="footer"
+        header-tag="header">
         <div slot="header">
           <i class="fa fa-align-justify"></i><strong> Bootstrap Navs </strong><small>pill style</small>
         </div>
@@ -52,8 +53,8 @@
         </div>
       </b-card>
       <b-card
-        header-tag="header"
-        footer-tag="footer">
+        footer-tag="footer"
+        header-tag="header">
         <div slot="header">
           <i class="fa fa-align-justify"></i><strong> Bootstrap Navs </strong><small>fill tabs</small>
         </div>
@@ -61,14 +62,14 @@
           <b-nav fill tabs>
             <b-nav-item active>Active</b-nav-item>
             <b-nav-item>Link</b-nav-item>
-            <b-nav-item>Link with a long name </b-nav-item>
+            <b-nav-item>Link with a long name</b-nav-item>
             <b-nav-item disabled>Disabled</b-nav-item>
           </b-nav>
         </div>
       </b-card>
       <b-card
-        header-tag="header"
-        footer-tag="footer">
+        footer-tag="footer"
+        header-tag="header">
         <div slot="header">
           <i class="fa fa-align-justify"></i><strong> Bootstrap Navs </strong><small>justified tabs</small>
         </div>
@@ -76,14 +77,14 @@
           <b-nav justified tabs>
             <b-nav-item active>Active</b-nav-item>
             <b-nav-item>Link</b-nav-item>
-            <b-nav-item>Link with a long name </b-nav-item>
+            <b-nav-item>Link with a long name</b-nav-item>
             <b-nav-item disabled>Disabled</b-nav-item>
           </b-nav>
         </div>
       </b-card>
       <b-card
-        header-tag="header"
-        footer-tag="footer">
+        footer-tag="footer"
+        header-tag="header">
         <div slot="header">
           <i class="fa fa-align-justify"></i><strong> Bootstrap Navs </strong><small>dropdown support</small>
         </div>
@@ -91,7 +92,7 @@
           <b-nav pills>
             <b-nav-item active>Active</b-nav-item>
             <b-nav-item>Link</b-nav-item>
-            <b-nav-item-dropdown id="nav7_ddown" text="Dropdown" right>
+            <b-nav-item-dropdown id="nav7_ddown" right text="Dropdown">
               <b-dropdown-item>one</b-dropdown-item>
               <b-dropdown-item>two</b-dropdown-item>
               <b-dropdown-divider></b-dropdown-divider>
@@ -101,13 +102,13 @@
         </div>
       </b-card>
       <b-card
-        header-tag="header"
-        footer-tag="footer">
+        footer-tag="footer"
+        header-tag="header">
         <div slot="header">
           <i class="fa fa-align-justify"></i><strong> Bootstrap Navs </strong><small>vertical variation</small>
         </div>
         <div>
-          <b-nav vertical class="w-25">
+          <b-nav class="w-25" vertical>
             <b-nav-item active>Active</b-nav-item>
             <b-nav-item>Link</b-nav-item>
             <b-nav-item>Another Link</b-nav-item>
@@ -120,8 +121,8 @@
 </template>
 
 <script>
-export default {
-  name: 'navs'
-}
+  export default {
+    name: 'navs'
+  };
 </script>
 

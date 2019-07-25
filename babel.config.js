@@ -7,8 +7,8 @@ module.exports = {
         'es6.symbol'
       ]
     }],
-    ["@babel/preset-env", {
-      "useBuiltIns": "entry"
+    ['@babel/preset-env', {
+      'useBuiltIns': 'entry'
     }]
   ]
-}
+};

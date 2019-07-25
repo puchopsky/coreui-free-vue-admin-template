@@ -282,4 +282,4 @@ export default {
       attributes: { target: '_blank', rel: 'noopener' }
     },
   ]
-}
+};

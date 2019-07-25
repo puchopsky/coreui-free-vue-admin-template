@@ -60,10 +60,10 @@
 </template>
 
 <script>
-import ColorTheme from './ColorTheme'
+  import ColorTheme from './ColorTheme';
 
-export default {
-  name: 'colors',
-  components: { ColorTheme }
-}
+  export default {
+    name: 'colors',
+    components: { ColorTheme }
+  };
 </script>
